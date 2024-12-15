@@ -5,15 +5,41 @@
   box-sizing: border-box;
 }
 
-.persistant-header {
+body {
   background-color: darkgoldenrod;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.persistant-header {
+  background-color: goldenrod;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 3%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 0 12px -2px black;
+  z-index: 1000;
 }
 
+footer {
+  background-color: goldenrod;
+  padding: 1px 3%;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  box-shadow: 0 0 12px -2px black;
+}
+
+h4 {
+  text-align: center;
+}
 .links-list li {
   display: inline-block;
 }
@@ -29,4 +55,86 @@ a {
 header {
   font-size: 16px;
   font-weight: bold;
+}
+
+.main-content {
+  width: 75%;
+  margin: 0 auto;
+  background-color: silver;
+  padding: 0 60px 45px;
+  box-shadow: 0 0 12px -2px black;
+}
+
+.main-content-video {
+  width: 75%;
+  margin: 0 auto;
+  background-color: silver;
+  padding: 0 60px 45px;
+  box-shadow: 0 0 12px -2px black;
+}
+
+.main-content-video h1 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.main-content-video section {
+  background-color: gold;
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+
+.main-content section {
+  min-height: 291px;
+  background-color: gold;
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+.main-content section h3 {
+  margin-left: 5%;
+  font-size: 28px;
+  font-weight: 400;
+}
+.main-content section hr {
+  width: 90%;
+  margin: 0 auto;
+  border-color: red;
+}
+
+.main-content-video section hr {
+  width: 90%;
+  margin: 0 auto;
+  border-color: red;
+}
+.section-content-video {
+  padding: 13px;
+  text-align: center;
+}
+.section-content {
+  padding: 13px;
+  padding-left: 5%;
+}
+
+.section-content p {
+  margin: 10px;
+  margin-left: 0;
+  line-height: 1.4;
+  font-size: 18px;
+}
+
+.section-content img {
+  float: right;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+section:nth-of-type(2) .section-content img {
+  float: left;
+  margin-left: 0px;
+  margin-top: 10px;
+}
+section:nth-of-type(4) .section-content img {
+  float: left;
+  margin-left: 0px;
+  margin-top: 10px;
 }
