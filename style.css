@@ -1,5 +1,11 @@
+@font-face {
+  font-family: love-days;
+  src: url("./fonts/love-days-love-font/LoveDays-2v7Oe.ttf");
+}
 * {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+
+  font-family: love-days;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -93,14 +99,14 @@ a {
 }
 
 header {
-  font-size: 16px;
+  font-size: 32px;
   font-weight: bold;
 }
 
 .main-content {
   width: 75%;
   margin: 0 auto;
-  background-color: silver;
+  background-color: rgb(99, 99, 99);
   padding: 0 60px 45px;
   box-shadow: 0 0 12px -2px black;
 }
@@ -110,10 +116,18 @@ header {
   border-color: red;
 }
 
+.main-content h2 {
+  font-size: 45px;
+}
+
+.about {
+  margin-left: 5%;
+}
+
 .main-content-video {
   width: 75%;
   margin: 0 auto;
-  background-color: silver;
+  background-color: rgb(99, 99, 99);
   padding: 0 60px 45px;
   box-shadow: 0 0 12px -2px black;
   display: flex;
@@ -138,6 +152,7 @@ header {
   margin-bottom: 30px;
   padding-top: 20px;
 }
+
 .main-content section h3 {
   margin-left: 5%;
   font-size: 28px;
@@ -172,6 +187,17 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+.battle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 55px;
+}
+
+.battle img {
+  width: 100%;
+  flex-direction: column;
 }
 
 video {
