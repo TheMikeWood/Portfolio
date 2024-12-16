@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="parallax">
+    <div class="header-wrapper">
+      <header class="persistant-header" id="headerId">
+        <h2>Sundrin Gaming</h2>
+        <nav class="main-nav">
+          <ul class="links-list">
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="../html/about.html">About</a></li>
+            <li><a href="../projects.html">Project</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div class="main-wrapper">
+      <main class="main-content-video">
+        <section class="section-video-wrapper" id="videoSection">
+          <h1>WELCOME TO MY PAGE!</h1>
+          <h4>Checkout our latest video</h4>
+          <hr />
+          <div class="section-content-video">
+            <!-- <video controls>
+                <source
+                  src="https://www.youtube.com/watch?v=H8t-1QmhkzM&t=518s&ab_channel=SundrinGaming"
+                  type="video/webm"
+                />
+                Your browser does not support the video tag.
+            </video> -->
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/H8t-1QmhkzM?si=1ovSgQZcWRyMFspP"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="section-content-video">
+            <video controls>
+              <source
+                src="../vid/Black Illustrative Thanks For Watching Youtube Outro.mp4"
+                type="video/webm"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </section>
+        <!-- This was a button to change background colors. Now it's a picture. -->
+        <img
+          src="../img/CLICK-ME.png"
+          alt=""
+          id="colorChangerButton"
+          width="150"
+        />
+        <script>
+          const buttonChanger = document.getElementById("colorChangerButton");
+          buttonChanger.addEventListener("click", () => {
+            const headerElement = document.getElementById("headerId");
+            const footerElement = document.getElementById("footerId");
+            const videoSectionElement = document.getElementById("videoSection");
+            const headerStyle = window.getComputedStyle(headerElement);
+            if (headerStyle.backgroundColor == "rgb(218, 165, 32)") {
+              headerElement.style.backgroundColor = "rgb(0, 100, 0)";
+              footerElement.style.backgroundColor = "rgb(0, 100, 0)";
+              videoSectionElement.style.backgroundColor = "rgb(50, 205, 50)";
+            } else {
+              headerElement.style.backgroundColor = "rgb(218, 165, 32)";
+              footerElement.style.backgroundColor = "rgb(218, 165, 32)";
+              videoSectionElement.style.backgroundColor = "rgb(255, 215, 0)";
+            }
+          });
+        </script>
+      </main>
+    </div>
+    <div class="footer-wrapper">
+      <footer id="footerId">
+        <nav>
+          <a href="https://www.youtube.com/@sundringaming">
+            <img
+              src="../img/youtube-123.png"
+              alt="youtube link to sundrin gaming"
+              height="50px"
+            />
+          </a>
+        </nav>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

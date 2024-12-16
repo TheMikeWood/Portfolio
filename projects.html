@@ -5,33 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome</title>
     <link rel="stylesheet" href="./style.css" />
-    <style>
-      .parallax {
-        background-image: url("img/Sundrin-Gaming-Right-Side-Up.png") !important;
-        min-height: 500px;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    </style>
   </head>
   <body class="parallax">
-    <header class="persistant-header">
-      <h2>Sundrin Gaming</h2>
-      <nav class="main-nav">
-        <ul class="links-list">
-          <li><a href="./html/projects.html">Home</a></li>
-          <li><a href="./html/about.html">About</a></li>
-          <li><a href="./index.html">Project</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="header-wrapper">
+      <header class="persistant-header">
+        <h2>Sundrin Gaming</h2>
+        <nav class="main-nav">
+          <ul class="links-list">
+            <li><a href="./html/home.html">Home</a></li>
+            <li><a href="./html/about.html">About</a></li>
+            <li><a href="./projects.html">Project</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
     <main class="main-content">
       <h2>It's a me-a</h2>
       <hr />
       <section>
-        <br />
         <h3>Part1</h3>
         <hr />
         <div class="section-content">
@@ -108,17 +99,19 @@
         </div>
       </section>
     </main>
-    <footer>
-      <nav>
-        <a href="https://www.youtube.com/@sundringaming">
-          <img
-            src="./img/youtube-123.png"
-            alt="youtube link to sundrin gaming"
-            height="50px"
-          />
-        </a>
-      </nav>
-    </footer>
+    <div class="footer-wrapper">
+      <footer>
+        <nav>
+          <a href="https://www.youtube.com/@sundringaming">
+            <img
+              src="./img/youtube-123.png"
+              alt="youtube link to sundrin gaming"
+              height="50px"
+            />
+          </a>
+        </nav>
+      </footer>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

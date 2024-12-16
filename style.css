@@ -5,11 +5,51 @@
   box-sizing: border-box;
 }
 
+.parallax {
+  background-image: url("../img/Sundrin-Gaming-Right-Side-Up.png") !important;
+  /* min-height: 500px; */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x:hidden;
+        width: 100vw;
+        height: 100vh; */
+}
+
 body {
   background-color: darkgoldenrod;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-width: 600px;
+  /* height: 100vh; */
+}
+/*With flex grow I am telling the content how much space it should use in the flex box
+ https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+.header-wrapper {
+  width: 100%;
+  /*higher vaules for z index will appear in the foreground 1 to 10000+*/
+  z-index: 10;
+  position: sticky;
+  top: 0;
+}
+
+.main-wrapper {
+  /*takes up the rest of the available space of the parent(in this example: body)*/
+  flex-grow: 1;
+  display: flex;
+  width: 100%;
+}
+
+.footer-wrapper {
+  width: 100%;
+  z-index: 10;
+  position: sticky;
+  bottom: 0;
 }
 
 .persistant-header {
@@ -19,22 +59,22 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 3%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  /* left: 0; */
   box-shadow: 0 0 12px -2px black;
-  z-index: 1000;
 }
 
 footer {
   background-color: goldenrod;
   padding: 1px 3%;
   width: 100%;
-  position: fixed;
-  bottom: 0px;
+  /* position: fixed;
+  bottom: 0px; */
   text-align: center;
   box-shadow: 0 0 12px -2px black;
+}
+
+h2 {
+  padding: 10px;
 }
 
 h4 {
@@ -65,12 +105,20 @@ header {
   box-shadow: 0 0 12px -2px black;
 }
 
+.main-content > hr {
+  margin-bottom: 25px;
+  border-color: red;
+}
+
 .main-content-video {
   width: 75%;
   margin: 0 auto;
   background-color: silver;
   padding: 0 60px 45px;
   box-shadow: 0 0 12px -2px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-content-video h1 {
@@ -106,9 +154,30 @@ header {
   margin: 0 auto;
   border-color: red;
 }
+
+.section-video-wrapper {
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  width: 100%;
+  max-width: 100vw;
+}
+
 .section-content-video {
   padding: 13px;
   text-align: center;
+  height: auto;
+  object-fit: fill;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+video {
+  flex: 1;
+  object-fit: cover;
+  max-width: 560px;
 }
 .section-content {
   padding: 13px;
