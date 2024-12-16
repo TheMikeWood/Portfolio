@@ -67,6 +67,7 @@ body {
   padding: 20px 3%;
   /* left: 0; */
   box-shadow: 0 0 12px -2px black;
+  border: 1px solid black;
 }
 
 footer {
@@ -77,6 +78,7 @@ footer {
   bottom: 0px; */
   text-align: center;
   box-shadow: 0 0 12px -2px black;
+  border: 1px solid black;
 }
 
 h2 {
@@ -198,6 +200,13 @@ header {
 .battle img {
   width: 100%;
   flex-direction: column;
+}
+
+main {
+  border: 2px solid black;
+}
+section {
+  border: 5px solid black;
 }
 
 video {
